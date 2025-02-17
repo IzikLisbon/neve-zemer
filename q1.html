@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fun Quiz Game</title>
+    <title>משחק חידון כיפי</title>
     <style>
-        /* Import a fun Google Font */
+        /* ייבוא גופן כיפי מגוגל */
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-        /* General styles */
+        /* עיצוב כללי */
         body {
             background: linear-gradient(to bottom, #fbc2eb, #a6c1ee);
             font-family: 'Fredoka One', cursive;
@@ -16,9 +16,10 @@
             padding: 20px;
             color: #333;
             margin: 0;
+            direction: rtl;
         }
 
-        /* Container for the game */
+        /* מיכל המשחק */
         .quiz-container {
             max-width: 400px;
             margin: auto;
@@ -67,7 +68,7 @@
             color: #ff5722;
         }
 
-        /* Make sure everything looks nice on mobile */
+        /* עיצוב לטלפונים ניידים */
         @media (max-width: 600px) {
             .quiz-container {
                 width: 90%;
@@ -85,14 +86,14 @@
     <script>
         function checkAnswer() {
             let userAnswer = document.getElementById("answer").value.toLowerCase();
-            let correctAnswer = "paris"; // Change this to the correct answer
+            let correctAnswer = "פריז"; // שינוי לתשובה הנכונה בעברית
             let hintDiv = document.getElementById("hint");
 
             if (userAnswer === correctAnswer) {
-                hintDiv.innerHTML = "🎉 Correct! Here's your hint: 🕵️‍♂️ The next clue is under the teacher’s desk!";
+                hintDiv.innerHTML = "🎉 תשובה נכונה! הנה הרמז שלך: 🕵️‍♂️ הרמז הבא נמצא מתחת לשולחן של המורה!";
                 hintDiv.style.color = "green";
             } else {
-                hintDiv.innerHTML = "❌ Oops! Try again!";
+                hintDiv.innerHTML = "❌ אופס! נסה שוב!";
                 hintDiv.style.color = "red";
             }
         }
@@ -100,11 +101,11 @@
 </head>
 <body>
     <div class="quiz-container">
-        <h2>🌟 Fun Quiz Time! 🌟</h2>
-        <p>What is the capital of France? 🏙️</p>
-        <input type="text" id="answer" placeholder="Your answer here">
+        <h2>🌟 משחק חידון כיפי! 🌟</h2>
+        <p>מהי עיר הבירה של צרפת? 🏙️</p>
+        <input type="text" id="answer" placeholder="הקלד את התשובה שלך כאן">
         <br>
-        <button onclick="checkAnswer()">Submit</button>
+        <button onclick="checkAnswer()">שלח</button>
         <p id="hint"></p>
     </div>
 </body>
