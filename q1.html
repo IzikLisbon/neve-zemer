@@ -3,27 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Game</title>
+    <title>Fun Quiz Game</title>
+    <style>
+        /* Import a fun Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+        /* General styles */
+        body {
+            background: linear-gradient(to bottom, #fbc2eb, #a6c1ee);
+            font-family: 'Fredoka One', cursive;
+            text-align: center;
+            padding: 20px;
+            color: #333;
+            margin: 0;
+        }
+
+        /* Container for the game */
+        .quiz-container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #ff4081;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            font-size: 18px;
+            border: 2px solid #ff4081;
+            border-radius: 10px;
+            text-align: center;
+            outline: none;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e91e63;
+        }
+
+        #hint {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #ff5722;
+        }
+
+        /* Make sure everything looks nice on mobile */
+        @media (max-width: 600px) {
+            .quiz-container {
+                width: 90%;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            input, button {
+                font-size: 16px;
+            }
+        }
+    </style>
     <script>
         function checkAnswer() {
             let userAnswer = document.getElementById("answer").value.toLowerCase();
-            let correctAnswer = "paris"; // Change this to your correct answer
+            let correctAnswer = "paris"; // Change this to the correct answer
             let hintDiv = document.getElementById("hint");
 
             if (userAnswer === correctAnswer) {
-                hintDiv.innerHTML = "Correct! Here's your hint: 🕵️‍♂️ The next clue is under the teacher’s desk!";
+                hintDiv.innerHTML = "🎉 Correct! Here's your hint: 🕵️‍♂️ The next clue is under the teacher’s desk!";
                 hintDiv.style.color = "green";
             } else {
-                hintDiv.innerHTML = "Wrong answer. Try again!";
+                hintDiv.innerHTML = "❌ Oops! Try again!";
                 hintDiv.style.color = "red";
             }
         }
     </script>
 </head>
 <body>
-    <h2>What is the capital of France?</h2>
-    <input type="text" id="answer" placeholder="Your answer">
-    <button onclick="checkAnswer()">Submit</button>
-    <p id="hint"></p>
-</body>
-</html>
+    <div class="quiz-container">
+        <h2>🌟 Fun Quiz Time! 🌟</h2>
+        <p>W
